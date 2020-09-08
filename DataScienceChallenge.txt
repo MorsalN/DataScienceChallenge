@@ -1,0 +1,45 @@
+Question 1: 
+a) Think about what could be going wrong with our calculation. Think about a better way to evaluate this data. 
+
+
+AOV, in my opinion, is a good metric to use when you’re analyzing an individual store. However, when you’re analyzing a 
+market, like for this instance a shoe market, AOV is not appropriate as different stores have different AOVs. As a result 
+using the Total Revenue/Total Orders ($3145.13) all of 100 stores will not portray each store fairly as each store has 
+varying AOVs. AOV is nice to see how an individual store is doing from month to month. It’s crucial for one store because 
+they can use that number and improve their store by either upgrading their Shopify Websites, investing in more ads or 
+brainstorming different options. 
+
+Summary AOVs of Sample Shops:
+AOV Shop 42: $235,101.49  Calculation is Total Revenue/Total Orders = $11,990,176/51 = SUM(D2078:D2128)/COUNT(E2078:E2128)
+AOV Shop 78: $49,213.04   Calculation is Total Revenue/Total Orders = $2263800/46 = SUM(D3866:D3911)/COUNT(E3866:E3911)
+AOV Shop 1: $308.82 	    Calculation is Total Revenue/Total Orders = $13,588/44 = SUM(D2:D45)/COUNT(E2:E45)
+AOV Shop 2: $174.33 	    Calculation is Total Revenue/Total Orders = $9588/55 = SUM(D46:D100)/COUNT(E46:E100)
+
+
+By going through the orders from different shops, there was one store (Shop 78) that sells one shoe for $25,725. 
+What is also important to consider is that Shop 42 has frequent orders of customers buying in bulk (2000 items) for $704000, 
+each shoe being $352. Shop 42 would have an AOV of $235,101.49. These 2 stores (Shop 42 and 78) seem like outliers to the shoe 
+market. Removing these two shops in the analysis would give very different results.  
+
+I believe if one wants to look at the entire dataset but evaluate the data in a better way, one possible approach would be to 
+separate the shops into bins or groups. Although they are all sneakers perhaps they could be separated into categories based on 
+model type and price: ‘Everyday Sneakers’, ‘Branded Sneakers’, ‘Exclusive Sneakers’. This way it avoids discrepancies when looking 
+at the average. 
+
+
+
+
+b) What metric would you report for this dataset?
+
+A metric that I would use in this case would be the Average Basket Value as it looks at your total revenue by the total number 
+of items placed. For this dataset specifically I would look at the Total Revenue of 100 Sneaker Shops/Total Numbers of Items Sold. 
+
+
+
+c) What is its value?
+ABV = Total Revenue of 100 Sneaker Shops/Total Numbers of Items Sold = $15,725,640/43936 = SUM(D2:D5001)/SUM(E2:E5001) =$357.92
+The value is $357.92.
+
+What is also interesting to see is what the ABV would be without the two outlier shops (Shop 42 and 78). 
+ABV = Total Revenue of 98 Sneaker Shops/Total Numbers of Items Sold = $1,471,664/9785 = $150.4
+The removal of just these two shops changes the ABV from $357.92 to $150.4!
