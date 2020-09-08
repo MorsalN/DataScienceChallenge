@@ -43,3 +43,46 @@ The value is $357.92.
 What is also interesting to see is what the ABV would be without the two outlier shops (Shop 42 and 78). 
 ABV = Total Revenue of 98 Sneaker Shops/Total Numbers of Items Sold = $1,471,664/9785 = $150.4
 The removal of just these two shops changes the ABV from $357.92 to $150.4!
+
+
+
+Question 2: 
+a) How many orders were shipped by Speedy Express in total?
+	
+There were a total of 54 orders that were shipped by Speedy Express. 
+
+SQL Query:
+SELECT * FROM [Orders]
+JOIN [Shippers]
+ON [Orders].ShipperID = [Shippers].ShipperID
+WHERE [Shippers].ShipperName = "Speedy Express"
+
+
+
+
+b) What is the last name of the employee with the most orders?
+	
+The last name of the employee with the most orders is Peacock with a total of 40 records out of the 196 number of records.. 
+
+SQL Query: 
+SELECT o.EmployeeID, e.LastName, COUNT(*) TotalOrders FROM Orders o
+JOIN Employees e
+ON o.EmployeeID = e.EmployeeID
+GROUP BY o.EmployeeID
+ORDER BY TotalOrders DESC
+
+
+
+c) What product was ordered the most by customers in Germany?
+	
+The most ordered product from customers in Germany was Gorgonzola Telino. 
+
+SQL Query:
+SELECT od.*, p.ProductName, o.OrderID, c.CustomerID, c.Country, COUNT(*) FROM OrderDetails od
+JOIN Products p, Orders o, Customers c
+ON od.ProductID = p.ProductID AND od.OrderID = o.OrderID AND o.CustomerID = c.CustomerID
+WHERE c.Country = "Germany"
+GROUP BY p.ProductID
+ORDER BY COUNT(*) DESC
+
+
