@@ -52,10 +52,11 @@ a) How many orders were shipped by Speedy Express in total?
 There were a total of 54 orders that were shipped by Speedy Express. 
 
 SQL Query:
-SELECT * FROM [Orders]
-JOIN [Shippers]
-ON [Orders].ShipperID = [Shippers].ShipperID
-WHERE [Shippers].ShipperName = "Speedy Express"
+SELECT * FROM Orders
+JOIN Shippers
+ON Orders.ShipperID = Shippers.ShipperID
+WHERE Shippers.ShipperName = "Speedy Express"
+
 
 
 
